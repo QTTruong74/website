@@ -3,44 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quoc Thong Truong - Portfolio</title>
+    <title>Quoc Thong Truong – Computer Engineering Student</title>
+
+    <!-- EDIT: one-sentence summary shown by Google and in link previews (max ~155 characters) -->
+    <meta name="description" content="Quoc Thong Truong – M.Sc. Computer Engineering student at TU Berlin. Embedded systems, software engineering and user interfaces. Portfolio and CV.">
+    <meta name="author" content="Quoc Thong Truong">
+    <meta name="theme-color" content="#08120d">
+    <link rel="canonical" href="https://qttruong74.github.io/website/">
+
+    <!-- Link preview (LinkedIn, email, messengers) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Quoc Thong Truong – Computer Engineering Student">
+    <meta property="og:description" content="Quoc Thong Truong – M.Sc. Computer Engineering student at TU Berlin.">
+    <meta property="og:url" content="https://qttruong74.github.io/website/">
+    <!-- EDIT (optional): add a 1200×630 preview image to the repo, then uncomment:
+    <meta property="og:image" content="https://qttruong74.github.io/website/preview.png">
+    -->
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%2308120d'/><rect x='3' y='3' width='58' height='58' fill='none' stroke='%232f6b4c' stroke-width='4'/><text x='32' y='42' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='26' font-weight='700' fill='%23e0b84a'>QT</text></svg>">
+
+    <!-- Fonts are self-hosted in /fonts (see style.css and CREDITS.md). No requests to Google. -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="bg" aria-hidden="true"></canvas>
+    <div class="shade" aria-hidden="true"></div>
 
-    <header>
-        <h1>Quoc Thong Truong</h1>
-        <p class="tagline">Computer Engineering Student | Embedded Systems | Software Development</p>
-    </header>
+    <div class="wrap">
+        <a class="skip-link" href="#main">Skip to content</a>
 
-    <main>
-        <section class="intro">
-            <h2>About Me</h2>
-            <p>
-                I am a Computer Engineering student at HTW Berlin, having started in 2023, with a specialization in microprocessor and sensor integration. My primary interests lie in software development, particularly in operating system design and implementation.
-            </p>
-        </section>
+        <!-- ===================== Navigation ===================== -->
+        <header class="site-header">
+            <nav class="nav" aria-label="Main">
+                <a class="nav-brand" href="#top">&gt; Quoc Thong Truong</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Embedded Systems (STM32)</li>
-                <li>Signal Processing</li>
-                <li>Programming: C/C++, Python</li>
-                <li>Shell Scripting (Linux, MacOS)</li>
-            </ul>
-        </section>
+        <main id="main">
 
-        <section class="cv">
-            <h2>Curriculum Vitae</h2>
-            <p>Download or view my CV in your preferred language.</p>
-            <button onclick="window.location.href='cv.html'">View My CV</button>
-        </section>
-    </main>
+            <!-- ===================== Hero ===================== -->
+            <section class="panel" id="top" aria-labelledby="name">
+              <div class="hero-inner">
+                <div class="hero-text">
+                <div class="refdes">PORTFOLIO</div>
+                <!-- EDIT (optional): add a nickname if you like, e.g. Quoc Thong "Bill" Truong -->
+                <h1 id="name">Quoc Thong<br>Truong</h1>
+                <p><span class="tag">&gt;</span> Computer Engineering Student </p>
+                <p>
+                    <!-- EDIT: one or two sentences about what you build and what you are looking for -->
+                    I'm drawn to embedded systems, and I also enjoy building software, user interfaces and websites.
+                </p>
 
-    <footer>
-        <p>© 2025 Quoc Thong Truong | <a href="mailto:truongquocthong2003@gmail.com">Contact Me</a></p>
-    </footer>
+                <ul class="hero-meta">
+                    <!-- EDIT: location -->
+                    <li>Berlin, Germany</li>
+                </ul>
 
+                <div class="btns">
+                    <a class="btn" href="CV_English.pdf" download>CV (English)</a>
+                    <a class="btn" href="CV_German.pdf" download lang="de">Lebenslauf (Deutsch)</a>
+                    <a class="btn alt" href="https://github.com/QTTruong74" target="_blank" rel="noopener">GitHub</a>
+                    <a class="btn alt" href="https://www.linkedin.com/in/quoc-thong-truong-6a1b62352/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                </div><!-- /hero-text -->
+              </div><!-- /hero-inner -->
+            </section>
+
+            <!-- ===================== About ===================== -->
+            <section class="panel" id="about" aria-labelledby="about-h">
+                <div class="refdes">SECTION 01</div>
+                <h2 id="about-h">ABOUT</h2>
+                <p>
+                    I'm a Computer Engineering student at TU Berlin (since October 2026), 
+                    with a focus on software engineering and embedded systems. 
+                    I'm especially interested in software development and in designing and building user interfaces.
+                </p>
+                <!-- EDIT: what you're looking for and from when -->
+                <p>
+                    I'm currently looking for a working student or internship position
+                    in software development, embedded systems or user interface design, starting from November 2026.
+                </p>
+            </section>
+
+            <!-- ===================== Projects ===================== -->
+            <section id="projects" aria-labelledby="proj-h">
+                <div class="panel section-head">
+                    <div class="refdes">SECTION 02</div>
+                    <h2 id="proj-h">PROJECTS</h2>
+                    <p>A selection of things I've built, mostly at university.</p>
+                </div>
+
+                <!-- To add a project, copy one <article> block below. Keep it to 2-3 lines.
+                     Change the title, text, tags and the "Code →" link (your repository URL). -->
+                <div class="grid">
+                    <article class="panel card">
+                        <h3>COVID-19 Data Analysis for Europe</h3>
+                        <p>Web app for exploring COVID-19 cases, deaths and vaccinations across European countries (2020–2024), with sortable tables and interactive charts. Database course project in a team of two.</p>
+                        <ul class="tags" aria-label="Technologies">
+                            <li>MySQL</li>
+                            <li>Node.js / Express</li>
+                            <li>Vue 3</li>
+                            <li>Chart.js</li>
+                            <li>Python</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/QTTruong74/COVID-Database-Europe" target="_blank" rel="noopener">Code →</a>
+                        </div>
+                        <div class="pins" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                    </article>
+
+                    <article class="panel card">
+                        <h3>SDL Labyrinth Game</h3>
+                        <p>Maze game where you dodge viruses, collect potions and race to the exit. Extends an open-source project with random maze generation, menus, 5 save slots and a top-10 highscore list. Software engineering course, team of two.</p>
+                        <ul class="tags" aria-label="Technologies">
+                            <li>C++</li>
+                            <li>SDL2</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/QTTruong74/SDL-labyrinth-game" target="_blank" rel="noopener">Code →</a>
+                        </div>
+                        <div class="pins" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                    </article>
+
+                    <article class="panel card">
+                        <h3>Mandelbrot</h3>
+                        <p>Graphical Mandelbrot set generator with zooming, color coding and saving of configurations.</p>
+                        <ul class="tags" aria-label="Technologies">
+                            <li>C</li>
+                            <li>SDL2</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/QTTruong74/Mandelbrot-Project" target="_blank" rel="noopener">Code →</a>
+                        </div>
+                        <div class="pins" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ===================== Experience & Education ===================== -->
+            <section class="panel" id="experience" aria-labelledby="exp-h">
+                <div class="refdes">SECTION 03</div>
+                <h2 id="exp-h">EXPERIENCE &amp; EDUCATION</h2>
+
+                <div class="timeline-group">
+                    <h3 class="timeline-heading">Experience</h3>
+                    <ol class="timeline">
+                        <li class="timeline-item">
+                            <div class="timeline-header">
+                                <h3>Working Student</h3>
+                                <span class="timeline-date">Oct 2025 – present</span>
+                            </div>
+                            <p class="timeline-org">Laser Electronics LE GmbH</p>
+                            <!-- EDIT (optional): add 1–2 bullet points about what you do as a working student -->
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-header">
+                                <h3>Mandatory Internship</h3>
+                                <span class="timeline-date">Feb 2026 – May 2026</span>
+                            </div>
+                            <p class="timeline-org">Laser Electronics LE GmbH</p>
+                            <ul>
+                                <li>Developed a modular software interface to control, diagnose and maintain a laser weeding tool.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="timeline-group">
+                    <h3 class="timeline-heading">Education</h3>
+                    <ol class="timeline">
+                        <li class="timeline-item">
+                            <div class="timeline-header">
+                                <h3>M.Sc. Computer Engineering</h3>
+                                <span class="timeline-date">Oct 2026 – present</span>
+                            </div>
+                            <p class="timeline-org">Technische Universität Berlin</p>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-header">
+                                <h3>B.Eng. Computer Engineering</h3>
+                                <span class="timeline-date">Oct 2023 – Sep 2026</span>
+                            </div>
+                            <p class="timeline-org">HTW Berlin – University of Applied Sciences</p>
+                            <ul>
+                                <li>Final grade: 1.8 (German scale, 1.0 = best)</li>
+                                <li>Thesis (with Laser Electronics LE GmbH): camera-based alignment setup for positioning error analysis and correction in a laser machine's deflection system</li>
+                                <li>Focus: Embedded Systems, Operating Systems, Signal Processing</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ===================== Skills ===================== -->
+            <section id="skills" aria-labelledby="skills-h">
+                <div class="panel section-head">
+                    <div class="refdes">SECTION 04</div>
+                    <h2 id="skills-h">SKILLS</h2>
+                    <p>Technologies and tools I have experience working with.</p>
+                </div>
+
+                <!-- Add or remove tags freely. Only list things you are comfortable being asked about in an interview. -->
+                <div class="skills-list">
+                    <div class="panel card">
+                        <h3>Programming</h3>
+                        <ul class="tags">
+                            <li>C / C++</li>
+                            <li>C#</li>
+                            <li>Python</li>
+                            <li>Assembly</li>
+                            <li>VHDL</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="panel card">
+                        <h3>Embedded &amp; Hardware</h3>
+                        <ul class="tags">
+                            <li>STM32</li>
+                            <li>STM32CubeMX</li>
+                            <li>Signal processing</li>
+                        </ul>
+                    </div>
+                    <div class="panel card">
+                        <h3>Tools &amp; Systems</h3>
+                        <ul class="tags">
+                            <li>Linux</li>
+                            <li>macOS</li>
+                            <li>Windows</li>
+                            <li>Git</li>
+                            <li>Vim</li>
+                            <li>LaTeX</li>
+                        </ul>
+                    </div>
+                    <div class="panel card">
+                        <h3>Languages (spoken)</h3>
+                        <ul class="tags">
+                            <li>Vietnamese – native</li>
+                            <li>English – advanced</li>
+                            <li>German – advanced</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== Contact ===================== -->
+            <section class="panel contact-panel" id="contact" aria-labelledby="contact-h">
+                <div class="refdes">SECTION 05</div>
+                <h2 id="contact-h">GET IN TOUCH</h2>
+                <p>
+                    I'm happy to hear about opportunities, projects or just to chat about embedded systems.
+                    The quickest way to reach me is by email.
+                </p>
+                <div class="btns">
+                    <a class="btn" href="mailto:truongquocthong2003@gmail.com">truongquocthong2003@gmail.com</a>
+                    <a class="btn alt" href="cv.html">View CV</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- ===================== Footer ===================== -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <p>© <span id="year">2026</span> Quoc Thong Truong</p>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/QTTruong74" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/quoc-thong-truong-6a1b62352/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="mailto:truongquocthong2003@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/QTTruong74/website/blob/main/CREDITS.md" target="_blank" rel="noopener">Credits &amp; licenses</a></li>
+                    <li><a href="#top">Back to top ↑</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <button id="toggle" type="button" aria-pressed="true">PULSES: ON</button>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+        // Menu follows you: lights up the link of the section you are currently reading
+        (function () {
+            var items = [];
+            document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (a) {
+                var el = document.querySelector(a.getAttribute('href'));
+                if (el) items.push({ a: a, el: el });
+            });
+            if (!items.length) return;
+
+            function setCurrent(cur) {
+                items.forEach(function (it) {
+                    if (it === cur) it.a.setAttribute('aria-current', 'location');
+                    else it.a.removeAttribute('aria-current');
+                });
+            }
+
+            function update() {
+                var line = window.innerHeight * 0.35;      // a section counts once it reaches 35% down the screen
+                var cur = null;
+                items.forEach(function (it) {
+                    if (it.el.getBoundingClientRect().top <= line) cur = it;
+                });
+                // at the very bottom of the page the last section (Contact) is always the current one
+                if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+                    cur = items[items.length - 1];
+                }
+                setCurrent(cur);
+            }
+
+            var ticking = false;
+            function onScroll() {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(function () { ticking = false; update(); });
+            }
+
+            addEventListener('scroll', onScroll, { passive: true });
+            addEventListener('resize', onScroll);
+            items.forEach(function (it) {
+                it.a.addEventListener('click', function () { setCurrent(it); });   // light up immediately on click
+            });
+            update();
+        })();
+    </script>
+    <script src="board.js"></script>
 </body>
 </html>

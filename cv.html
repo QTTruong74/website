@@ -2,41 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Select CV Language</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV – Quoc Thong Truong</title>
+    <meta name="description" content="Curriculum vitae of Quoc Thong Truong in English and German.">
+    <meta name="author" content="Quoc Thong Truong">
+    <meta name="theme-color" content="#08120d">
+    <link rel="canonical" href="https://qttruong74.github.io/website/cv.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%2308120d'/><rect x='3' y='3' width='58' height='58' fill='none' stroke='%232f6b4c' stroke-width='4'/><text x='32' y='42' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='26' font-weight='700' fill='%23e0b84a'>QT</text></svg>">
+
+    <!-- Fonts are self-hosted in /fonts (see style.css and CREDITS.md). No requests to Google. -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        .cv-choice {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 100px;
-        }
-
-        .cv-choice h1 {
-            margin-bottom: 20px;
-        }
-
-        .cv-choice a {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 24px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cv-choice a:hover {
-            background-color: #2980b9;
-        }
-    </style>
 </head>
 <body>
-    <div class="cv-choice">
-        <h1>Please choose your language</h1>
-        <a href="CV_English.pdf" target="_blank">English</a>
-        <a href="CV_German.pdf" target="_blank">German</a>
+    <canvas id="bg" aria-hidden="true"></canvas>
+    <div class="shade" aria-hidden="true"></div>
+
+    <div class="wrap">
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        <header class="site-header">
+            <nav class="nav" aria-label="Main">
+                <a class="nav-brand" href="index.html">&gt; Quoc Thong Truong</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="cv.html" aria-current="page">CV</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <section class="panel" aria-labelledby="cv-h">
+                <div class="refdes">DOCUMENT</div>
+                <h1 id="cv-h">My CV</h1>
+                <p>
+                    Available in English and German as PDF.
+                    <!-- EDIT: update this date whenever you replace the PDFs -->
+                    Last updated: November 2026.
+                </p>
+            </section>
+
+            <div class="grid">
+                <article class="panel card cv-card">
+                    <div class="refdes lang-code">EN</div>
+                    <h3>English</h3>
+                    <p>Curriculum vitae in English.</p>
+                    <div class="btns">
+                        <a class="btn" href="CV_English.pdf" download>Download PDF</a>
+                        <a class="btn alt" href="CV_English.pdf" target="_blank" rel="noopener">View</a>
+                    </div>
+                </article>
+
+                <article class="panel card cv-card" lang="de">
+                    <div class="refdes lang-code">DE</div>
+                    <h3>Deutsch</h3>
+                    <p>Lebenslauf auf Deutsch.</p>
+                    <div class="btns">
+                        <a class="btn" href="CV_German.pdf" download>PDF herunterladen</a>
+                        <a class="btn alt" href="CV_German.pdf" target="_blank" rel="noopener">Ansehen</a>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <p>© <span id="year">2026</span> Quoc Thong Truong</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">← Back to home</a></li>
+                    <li><a href="mailto:truongquocthong2003@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/QTTruong74/website/blob/main/CREDITS.md" target="_blank" rel="noopener">Credits &amp; licenses</a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
+
+    <button id="toggle" type="button" aria-pressed="true">PULSES: ON</button>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="board.js"></script>
 </body>
 </html>
